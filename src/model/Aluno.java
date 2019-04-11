@@ -1,14 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model;
 
-/**
- *
- * @author vitor
- */
 public class Aluno {
+    
+    private String idAluno;
+    private String nomeAluno;
+    
+    public Aluno(String aIdAluno, String aNomeAluno){
+        this.idAluno = aIdAluno;
+        this.nomeAluno = aNomeAluno;
+    }
+
+    public String getIdAluno() {
+        return idAluno;
+    }
+
+    public void setIdAluno(String idAluno) {
+        this.idAluno = idAluno;
+    }
+
+    public String getNomeAluno() {
+        return nomeAluno;
+    }
+
+    public void setNomeAluno(String nomeAluno) {
+        this.nomeAluno = nomeAluno;
+    }
+    
+    
     
 }

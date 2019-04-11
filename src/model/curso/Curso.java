@@ -4,18 +4,18 @@ package model.curso;
 
 abstract class Curso {
     
-    private String nome;
+    private String nomeCurso;
     
     public Curso(String aNome){
-        this.nome = aNome;
+        this.nomeCurso = aNome;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeCurso() {
+        return nomeCurso;
     }
 
     public void setNome(String aNome) {
-        this.nome = aNome;
+        this.nomeCurso = aNome;
     }
     
     public abstract boolean isPassou();
