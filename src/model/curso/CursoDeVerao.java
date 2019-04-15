@@ -11,11 +11,30 @@ public class CursoDeVerao extends Curso {
     }
     
     public void setNotaP1(double nota){
-        this.notaNP1 = nota;
+        
+        
+        try {
+            
+        } catch (Exception e) {
+        }
+        if (nota < 0 || nota > 10) {
+            
+            System.out.println("Erro!");
+            System.out.println("Por favor digite uma nota válida entre 0 e 10.");
+        } else{
+            this.notaNP1 = nota;
+        }
     } 
     
     public void setNotaP2(double nota){
-        this.notaNP2 = nota;
+        
+        if (nota < 0 || nota > 10) {
+            
+            System.out.println("Erro!");
+            System.out.println("Por favor digite uma nota válida entre 0 e 10.");
+        } else{
+            this.notaNP2 = nota;
+        }
     }
     
     public double getNotaP1(){
