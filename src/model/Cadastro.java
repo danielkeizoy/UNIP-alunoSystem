@@ -7,8 +7,28 @@ package model;
 
 /**
  *
- * @author vitor
+ * @author daniel
  */
 public class Cadastro {
+    private Aluno aluno(){
+
+    }
+    private Historico historico(){
     
+    }
+    public Cadastro (String id, String nome){
+
+    }
+    public Aluno getAluno(){
+
+    }
+    public Historico getHistorico(){
+
+    }
+    public void add(Curso curso){
+    }
+    public void printStuff(){
+        System.out.println("1");
 }
+    }
+
