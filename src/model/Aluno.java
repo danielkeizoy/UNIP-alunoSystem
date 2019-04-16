@@ -27,6 +27,13 @@ public class Aluno {
         this.nomeAluno = nomeAluno;
     }
     
-    
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Nome do Aluno: " + getNomeAluno();
+        res += "ID: " + getIdAluno();
+        
+        return res;
+    }
     
 }
