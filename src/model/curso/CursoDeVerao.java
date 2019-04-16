@@ -6,13 +6,10 @@ public class CursoDeVerao extends Curso {
     private double notaNP1;
     private double notaNP2;
 
-    public CursoDeVerao (int aNome) {
-        
-        this.notaNP1 = 0.0;
-        this.notaNP2 = 0.0;
+    public CursoDeVerao(String aNome) {
+        super(aNome);
     }
-    
-    
+
     public void setNotaP1(double nota){
         
         if ((nota >= 0) && (nota <= 10)) {
