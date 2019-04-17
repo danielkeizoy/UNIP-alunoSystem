@@ -8,6 +8,8 @@ public class CursoDeVerao extends Curso {
 
     public CursoDeVerao(String aNome) {
         super(aNome);
+        this.notaNP1 = 0.0;
+        this.notaNP2 = 0.0;
     }
 
     public void setNotaP1(double nota){
@@ -42,20 +44,10 @@ public class CursoDeVerao extends Curso {
     public boolean isPassou(){
         double media = getMedia();
         if (media >= 7){
-            System.out.println("-------------------------------------");
-            System.out.println("Aluno: " + getNomeAluno());
-            System.out.println("Curso: " + getNomeCurso());
-            System.out.println("Media: " + media);
             System.out.println("Status: Aprovado!");
-            System.out.println("-------------------------------------");
             return true;
         } else{
-            System.out.println("-------------------------------------");
-            System.out.println("Aluno: " + getNomeAluno());
-            System.out.println("Curso: " + getNomeCurso());
-            System.out.println("Média: " + media );
             System.out.println("Status: Reprovado.");
-            System.out.println("-------------------------------------");
             return false;
         }
     }
@@ -66,7 +58,15 @@ public class CursoDeVerao extends Curso {
         return res;
     }
      
+    @Override
     public String toString(){
+        String res = "";
+        res += "----------------------" + "\n";
+        res += "Curso: " + getNomeCurso() + "\n";
+        res += "Media: " + getMedia() + "\n";
+        res += isPassou() + "\n";
+        res += "----------------------" + "\n";
         
+        return res;
     }
 }

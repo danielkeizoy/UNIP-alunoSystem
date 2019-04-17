@@ -2,7 +2,7 @@
 package model.curso;
 
 
-abstract class Curso {
+public abstract class Curso {
     
     private String nomeCurso;
     

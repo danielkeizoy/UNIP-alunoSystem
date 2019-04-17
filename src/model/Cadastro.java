@@ -1,5 +1,6 @@
 
 package model;
+import model.curso.Curso;
 
 public class Cadastro {
     
@@ -7,9 +8,9 @@ public class Cadastro {
     private Historico historico;
     
     public Cadastro (String id, String nome){
-        
-        
-        
+        //Preciso verificar o funcionamento disso aqui.
+        aluno.setIdAluno(id);
+        aluno.setNomeAluno(nome);
     }
         
 
@@ -22,11 +23,14 @@ public class Cadastro {
     }
     
     public void add(Curso curso){
-        
+        historico.add(curso);
     }
     
+    @Override
     public String toString(){
-        String res += "Nome do aluno: " + getAluno();
-        res += "ID: " +
+        String res = "";
+        res += "Nome do aluno: " + getAluno();
+        res += "ID: ";
+        return res;
     }
 }
