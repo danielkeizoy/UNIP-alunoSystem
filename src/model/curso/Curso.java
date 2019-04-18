@@ -20,6 +20,8 @@ public abstract class Curso {
     
     public abstract boolean isPassou();
     
+    public abstract boolean isAprovado();
+    
     public abstract double getMedia();
  
     public String toString(){
