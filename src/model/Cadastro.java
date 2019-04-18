@@ -1,6 +1,6 @@
 
 package model;
-import model.curso.Curso;
+import model.curso.*;
 
 public class Cadastro {
     
@@ -8,9 +8,8 @@ public class Cadastro {
     private Historico historico;
     
     public Cadastro (String id, String nome){
-        //Preciso verificar o funcionamento disso aqui.
-        aluno.setIdAluno(id);
-        aluno.setNomeAluno(nome);
+        this.aluno = new Aluno(id, nome);
+        this.historico = new Historico();
     }
         
 
@@ -23,14 +22,16 @@ public class Cadastro {
     }
     
     public void add(Curso curso){
-        historico.add(curso);
+        this.historico.add(curso);
     }
     
     @Override
-    public String toString(){
+    public String toString() {
         String res = "";
-        res += "Nome do aluno: " + getAluno();
-        res += "ID: ";
+        res += "----------- CADASTRO -----------" + "\n";
+        res += getAluno() + "\n";
+        res += "Histórico: " + getHistorico() + "\n";
+        res += "--------------------------------" + "\n";
         return res;
     }
 }

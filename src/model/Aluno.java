@@ -30,8 +30,8 @@ public class Aluno {
     @Override
     public String toString(){
         String res = "";
-        res += "Nome do Aluno: " + getNomeAluno();
-        res += "ID: " + getIdAluno();
+        res += "Nome do Aluno: " + getNomeAluno() + "\n";
+        res += "ID: " + getIdAluno() + "\n";
         
         return res;
     }

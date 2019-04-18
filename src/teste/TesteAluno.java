@@ -11,15 +11,15 @@ public class TesteAluno {
 		Cadastro cadastro = new Cadastro("123", "Ada Lovelace");
 		System.out.println(cadastro);
 		System.out.println();
-//
-//		// Teste02
-//		CursoDeVerao cursoDeVerao01 = new CursoDeVerao("Algebra Linear");
-//		cadastro.add(cursoDeVerao01);
-//		cursoDeVerao01.setNotaP1(8.0);
-//		cursoDeVerao01.setNotaP2(9.0);
-//		System.out.println(cadastro);
-//		System.out.println();
-//
+
+		// Teste02
+		CursoDeVerao cursoDeVerao01 = new CursoDeVerao("Algebra Linear");
+		cadastro.add(cursoDeVerao01);
+		cursoDeVerao01.setNotaP1(8.0);
+		cursoDeVerao01.setNotaP2(9.0);
+		System.out.println(cadastro);
+		System.out.println();
+
 //		// Teste03
 //		CursoDeVerao cursoDeVerao02 = new CursoDeVerao("Analise");
 //		cadastro.add(cursoDeVerao02);

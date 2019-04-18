@@ -5,8 +5,12 @@
         <group>
             <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/Cadastro.java</file>
             <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/curso/CursoDePos.java</file>
+            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/Aluno.java</file>
+            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/curso/Curso.java</file>
             <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/teste/TesteAluno.java</file>
+            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/curso/CursoDeVerao.java</file>
             <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/curso/CursoSuperior.java</file>
+            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/trabalhoNP1/src/model/Historico.java</file>
         </group>
     </open-files>
 </project-private>

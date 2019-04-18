@@ -10,7 +10,7 @@ public abstract class Curso {
         this.nomeCurso = aNome;
     }
 
-    public String getNomeCurso() {
+    public String getNome() {
         return nomeCurso;
     }
 
@@ -22,8 +22,8 @@ public abstract class Curso {
     
     public abstract double getMedia();
  
-    public String toString(String aNome){
-        String res = "Nome: " + aNome;
+    public String toString(){
+        String res = "Nome: " + getNome();
         return res;
     }
     

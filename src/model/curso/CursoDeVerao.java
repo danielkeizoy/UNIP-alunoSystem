@@ -5,6 +5,7 @@ public class CursoDeVerao extends Curso {
     
     private double notaNP1;
     private double notaNP2;
+    private double media;
 
     public CursoDeVerao(String aNome) {
         super(aNome);
@@ -14,7 +15,7 @@ public class CursoDeVerao extends Curso {
 
     public void setNotaP1(double nota){
         
-        if ((nota >= 0) && (nota <= 10)) {
+        if ((nota >= 0.0) && (nota <= 10.0)) {
             this.notaNP2 = nota;
         } else{
             System.out.println("Erro!");
@@ -42,8 +43,8 @@ public class CursoDeVerao extends Curso {
     
     @Override
     public boolean isPassou(){
-        double media = getMedia();
-        if (media >= 7){
+        double md = getMedia();
+        if (md >= 7){
             System.out.println("Status: Aprovado!");
             return true;
         } else{
@@ -54,15 +55,17 @@ public class CursoDeVerao extends Curso {
     
     @Override
     public double getMedia(){
-        double res = (this.notaNP1 + this.notaNP2) / 2;
-        return res;
+        this.media = (this.notaNP1 + this.notaNP2) / 2;
+        return this.media;
     }
      
     @Override
     public String toString(){
         String res = "";
         res += "----------------------" + "\n";
-        res += "Curso: " + getNomeCurso() + "\n";
+        res += "Curso de Verão: " + getNome() + "\n";
+        res += "Nota P1: " + getNotaP1() + "\n";
+        res += "Nota P2: " + getNotaP2() + "\n";
         res += "Media: " + getMedia() + "\n";
         res += isPassou() + "\n";
         res += "----------------------" + "\n";

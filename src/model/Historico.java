@@ -24,6 +24,9 @@ public class Historico implements Iterable<Curso>{
     
     @Override
     public String toString(){
-        return this.Cursos.toString();
+        String res = "";
+        res += this.Cursos.toString();
+        
+        return res;
     }
 }   
