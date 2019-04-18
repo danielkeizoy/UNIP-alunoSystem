@@ -2,7 +2,7 @@
 package model.curso;
 
 
-public abstract class Curso {
+public abstract class Curso implements Comparable<Curso>{
     
     private String nomeCurso;
     
@@ -22,6 +22,12 @@ public abstract class Curso {
     
     public abstract double getMedia();
  
+    @Override
+    public int compareTo(Curso outroCurso){
+        return this.nomeCurso.compareTo(outroCurso.getNome());
+    }
+    
+    @Override
     public String toString(){
         String res = "Nome: " + getNome();
         return res;

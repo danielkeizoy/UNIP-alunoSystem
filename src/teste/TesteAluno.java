@@ -12,7 +12,7 @@ public class TesteAluno {
 		System.out.println(cadastro);
 		System.out.println();
 
-		// Teste02
+	// Teste02
 		CursoDeVerao cursoDeVerao01 = new CursoDeVerao("Algebra Linear");
 		cadastro.add(cursoDeVerao01);
 		cursoDeVerao01.setNotaP1(8.0);

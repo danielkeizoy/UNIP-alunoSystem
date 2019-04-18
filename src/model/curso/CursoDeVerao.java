@@ -3,9 +3,9 @@ package model.curso;
 
 public class CursoDeVerao extends Curso {
     
-    private double notaNP1;
-    private double notaNP2;
-    private double media;
+    private Double notaNP1;
+    private Double notaNP2;
+    private Double media;
 
     public CursoDeVerao(String aNome) {
         super(aNome);
@@ -13,19 +13,19 @@ public class CursoDeVerao extends Curso {
         this.notaNP2 = 0.0;
     }
 
-    public void setNotaP1(double nota){
+    public void setNotaP1(Double nota){
         
         if ((nota >= 0.0) && (nota <= 10.0)) {
-            this.notaNP2 = nota;
+            this.notaNP1 = nota;
         } else{
             System.out.println("Erro!");
             System.out.println("Por favor digite uma nota válida entre 0 e 10.");
         }
     } 
     
-    public void setNotaP2(double nota){
+    public void setNotaP2(Double nota){
         
-        if ((nota >= 0) && (nota <= 10)) {
+        if ((nota >= 0.0) && (nota <= 10.0)) {
             this.notaNP2 = nota;
         } else{
             System.out.println("Erro!");
@@ -40,35 +40,31 @@ public class CursoDeVerao extends Curso {
     public double getNotaP2(){
         return notaNP2;
     }
-    
+     
     @Override
     public boolean isPassou(){
-        double md = getMedia();
-        if (md >= 7){
-            System.out.println("Status: Aprovado!");
-            return true;
+        Double md = getMedia();
+        if (md >= 7) {
+                return true;
         } else{
-            System.out.println("Status: Reprovado.");
-            return false;
-        }
+                return false;
+            }       
     }
-    
+         
     @Override
     public double getMedia(){
-        this.media = (this.notaNP1 + this.notaNP2) / 2;
+        this.media = (getNotaP1() + getNotaP2()) / 2;    
         return this.media;
     }
      
     @Override
     public String toString(){
         String res = "";
-        res += "----------------------" + "\n";
         res += "Curso de Verão: " + getNome() + "\n";
         res += "Nota P1: " + getNotaP1() + "\n";
         res += "Nota P2: " + getNotaP2() + "\n";
         res += "Media: " + getMedia() + "\n";
-        res += isPassou() + "\n";
-        res += "----------------------" + "\n";
+        res += "Aprovado: " + isPassou() + "\n";
         
         return res;
     }
