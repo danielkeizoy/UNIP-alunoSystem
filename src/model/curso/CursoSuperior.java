@@ -2,104 +2,131 @@ package model.curso;
 
 public class CursoSuperior extends Curso {
     
-    private double notanp1; 
-    private double notanp2;
-    private double reposicao;
-    private double exame;
+    private double notaP1; 
+    private double notaP2;
+    private double notaReposicao;
+    private double notaExame;
     private double media;
-    private double mediaFinal;
+    private double mediaPrincipal;
 
     public CursoSuperior (String aNome) {
         super(aNome);
                 
-        this.notanp1 = 0.0;
-        this.notanp2 = 0.0;
-        this.reposicao = 0.0;
-        this.exame = 0.0;
+        this.notaP1 = 0.0;
+        this.notaP2 = 0.0;
+        this.notaReposicao = 0.0;
+        this.notaExame = 0.0;
         this.media = 0.0;
-        this.mediaFinal = 0.0;
+        this.mediaPrincipal = 0.0;
         
     }
     
     public void setNotaP1(double nota) {
-        this.notanp1 = nota; 
+    	if ((nota >= 0.0) && (nota <= 10.0)) {
+            this.notaP1 = nota;
+        } else{
+            System.out.println("Erro!");
+            System.out.println("Por favor digite uma nota válida entre 0 e 10.");
+        } 
     }
 
     public void setNotaP2(double nota){
-        this.notanp2 = nota; 
+    	if ((nota >= 0.0) && (nota <= 10.0)) {
+            this.notaP2 = nota;
+        } else{
+            System.out.println("Erro!");
+            System.out.println("Por favor digite uma nota válida entre 0 e 10.");
+        }
     }
 
     public void setNotaReposicao(double nota) {
-        this.reposicao = nota; 
+    	if ((nota >= 0.0) && (nota <= 10.0)) {
+            this.notaReposicao = nota;
+        } else{
+            System.out.println("Erro!");
+            System.out.println("Por favor digite uma nota válida entre 0 e 10.");
+        }
     }
 
     public void setNotaExame(double nota) {
-        this.exame = nota; 
+    	if ((nota >= 0.0) && (nota <= 10.0)) {
+            this.notaExame = nota;
+        } else{
+            System.out.println("Erro!");
+            System.out.println("Por favor digite uma nota válida entre 0 e 10.");
+        } 
     }
   
     public double getNotaP1(){
-        return notanp1;
+        return notaP1;
     }
 
     public double getNotaP2(){
-        return notanp2;
+        return notaP2;
     }
 
     public double getNotaReposicao() {
-        return reposicao;
+        return notaReposicao;
     }
 
     public double getNotaExame(){
-        return exame;
+        return notaExame;
     }
     
    
     @Override
     public double getMedia(){
-        // TESTE DE NOTA 
-        
-        if ((this.reposicao > this.notanp1) || (this.reposicao > this.notanp2)) {
-            if (this.reposicao > this.notanp1) {
-            	if( ( (this.reposicao + this.notanp2) /2) < 7) {
-            		this.mediaFinal = (( (this.reposicao + this.notanp2) /2) + exame)/2;
-            	};       
+    	
+        if ((this.notaReposicao > this.notaP1) || (this.notaReposicao > this.notaP2)) {        	
+            
+        	if (this.notaReposicao > this.notaP1) {        		
+            	this.mediaPrincipal = this.notaReposicao + this.notaP2;
+            	if (this.mediaPrincipal < 7) {            		
+            		this.media = (this.mediaPrincipal + this.notaExame) /2;
+            	}            	
+            	else {
+            		this.media = this.mediaPrincipal;
+            	}
             }
-            else{
-            	if( ( (this.reposicao + this.notanp1) /2) < 7) {
-            		this.mediaFinal = (( (this.reposicao + this.notanp1) /2) + exame)/2;
-            	};
+        	
+            else {
+            	this.mediaPrincipal = this.notaReposicao + this.notaP1;
+            	if (this.mediaPrincipal < 7) {
+            		this.media = (this.mediaPrincipal + this.notaExame) /2;
+            	}
+            	else {
+            		this.media = this.mediaPrincipal;
+            	}
             }
         }
-        return mediaFinal;
+        else {
+        	this.media = this.notaP1 + this.notaP2;
+        }
+        return media;
     }
     
     @Override
     public boolean isPassou(){
-    	this.media = (this.notanp1 + this.notanp2) / 2;
-        if (media >= 7){
+        if (this.media >= 7){
+        	System.out.println("Status: Aprovado!");
             return true;
         } 
-        else{            
+        else{
+        	System.out.println("Status: Reprovado.");
             return false;
         }
     }
-    
     @Override
-    public boolean isAprovado(){
-        boolean status = isPassou();
-        if(status == true) {
-        	System.out.println("Status: Aprovado!");
-            return true;
-        }
-        else {
-        	if (mediaFinal>= 5){
-        		System.out.println("Status: Aprovado!");
-        		return true;
-        	} 
-        	else{
-        		System.out.println("Status: Reprovado.");
-        		return false;
-        	}
-        }
+    public String toString(){
+        String res = "";
+        res += "Curso Superior: " + getNome() + "\n";
+        res += "Nota P1: " + getNotaP1() + "\n";
+        res += "Nota P2: " + getNotaP2() + "\n";
+        res += "Media: " + getMedia() + "\n";
+        res += "Aprovado: " + isPassou() + "\n";
+        
+        return res;
     }
+
+    
 }
