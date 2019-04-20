@@ -30,7 +30,7 @@ public class Cadastro {
         String res = "";
         res += "----------- CADASTRO -----------" + "\n";
         res += getAluno() + "\n";
-        res += "Histórico: " + "\n";
+        res += "Historico: " + "\n";
         res += getHistorico() + "\n";
         res += "--------------------------------" + "\n";
         return res;

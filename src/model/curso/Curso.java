@@ -11,12 +11,13 @@ public abstract class Curso implements Comparable<Curso>{
     }
 
     public String getNome() {
-        return nomeCurso;
+        return "\n" + nomeCurso;
     }
 
     public void setNome(String aNome) {
         this.nomeCurso = aNome;
     }
+    
     
     public abstract boolean isPassou();
     

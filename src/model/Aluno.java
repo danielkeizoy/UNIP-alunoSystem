@@ -19,18 +19,18 @@ public class Aluno {
         this.idAluno = idAluno;
     }
 
-    public String getNomeAluno() {
+    public String getNome() {
         return nomeAluno;
     }
 
-    public void setNomeAluno(String nomeAluno) {
+    public void setNome(String nomeAluno) {
         this.nomeAluno = nomeAluno;
     }
     
     @Override
     public String toString(){
         String res = "";
-        res += "Nome do Aluno: " + getNomeAluno() + "\n";
+        res += "Nome do Aluno: " + getNome() + "\n";
         res += "ID: " + getIdAluno() + "\n";
         
         return res;

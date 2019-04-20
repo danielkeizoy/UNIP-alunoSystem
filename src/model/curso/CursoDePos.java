@@ -124,11 +124,11 @@ public class CursoDePos extends Curso {
     @Override
     public String toString(){
         String res = "";
-        res += "Curso de Pos: " + getNome() + "\n";
+        res += "\nCurso de Pos: " + getNome() + "\n";
         res += "Nota P1: " + getNotaP1() + "\n";
         res += "Nota P2: " + getNotaP2() + "\n";
         res += "Media: " + getMedia() + "\n";
-        res += "Aprovado: " + isPassou() + "\n";
+        res += "Aprovado: " + isPassou() + "\n\n";
         
         return res;
     }
