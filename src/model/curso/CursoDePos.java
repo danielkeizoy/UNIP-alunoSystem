@@ -112,7 +112,7 @@ public class CursoDePos extends Curso {
     }
     
     @Override
-    public boolean isPassou(){
+    public boolean isAprovado(){
     	this.media = (this.notaP1 + this.notaP2) / 2;
         if (media >= 5){
             return true;
@@ -128,7 +128,7 @@ public class CursoDePos extends Curso {
         res += "Nota P1: " + getNotaP1() + "\n";
         res += "Nota P2: " + getNotaP2() + "\n";
         res += "Media: " + getMedia() + "\n";
-        res += "Aprovado: " + isPassou() + "\n\n";
+        res += "Aprovado: " + isAprovado() + "\n\n";
         
         return res;
     }

@@ -19,7 +19,7 @@ public abstract class Curso implements Comparable<Curso>{
     }
     
     
-    public abstract boolean isPassou();
+    public abstract boolean isAprovado();
     
     public abstract double getMedia();
  

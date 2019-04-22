@@ -106,13 +106,13 @@ public class CursoSuperior extends Curso {
     }
     
     @Override
-    public boolean isPassou(){
+    public boolean isAprovado(){
         if (this.media >= 7){
-        	System.out.println("Status: Aprovado!");
-            return true;
+        	
+        	return true;
         } 
         else{
-        	System.out.println("Status: Reprovado.");
+        	
             return false;
         }
     }
@@ -123,7 +123,7 @@ public class CursoSuperior extends Curso {
         res += "Nota P1: " + getNotaP1() + "\n";
         res += "Nota P2: " + getNotaP2() + "\n";
         res += "Media: " + getMedia() + "\n";
-        res += "Aprovado: " + isPassou() + "\n\n";
+        res += "Aprovado: " + isAprovado() + "\n\n";
         
         return res;
     }

@@ -42,7 +42,7 @@ public class CursoDeVerao extends Curso {
     }
      
     @Override
-    public boolean isPassou(){
+    public boolean isAprovado(){
         Double md = getMedia();
         if (md >= 7) {
                 return true;
@@ -64,7 +64,7 @@ public class CursoDeVerao extends Curso {
         res += "Nota P1: " + getNotaP1() + "\n";
         res += "Nota P2: " + getNotaP2() + "\n";
         res += "Media: " + getMedia() + "\n";
-        res += "Aprovado: " + isPassou() + "\n\n";
+        res += "Aprovado: " + isAprovado() + "\n\n";
         
         return res;
     }

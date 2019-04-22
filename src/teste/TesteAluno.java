@@ -82,7 +82,7 @@ public class TesteAluno {
 		// Teste10
 		System.out.println("Cursos em que foi aprovado o Aluno " + cadastro.getAluno().getNome());
 		for(Curso curso : cadastro.getHistorico()) {
-			if(curso.isPassou()) {
+			if(curso.isAprovado()) {
 				System.out.println(curso.getNome());
 			}
 		}
